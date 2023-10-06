@@ -1,38 +1,82 @@
-.App {
+.calculator {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: black;
+  border-radius: 10px;
+  margin-top: 80px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
+h2 {
+  font-size: 24px;
+  text-transform: capitalize;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0px 3px 5px 0px rgba(117, 102, 102, 0.6);
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  color: white; /* Change the color to your preference */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.display {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.input,
+.result {
+  font-size: 24px;
+  padding: 10px;
+  width: 95%;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  font-size: 24px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+}
+.button-column {
+  display: flex;
+  flex-direction: column;
+}
+.operators {
+  color: tomato;
+}
+.operators.equal {
+  background-color: tomato;
+  color: white;
+}
+.button-column button {
+  font-size: 24px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  background-color: black;
+  color: tomato;
+  cursor: pointer;
+}
+button:hover {
+  background-color: grey;
+}
+
+button:active {
+  background-color: #00357a;
 }
